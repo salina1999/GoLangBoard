@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>게시물 등록</title>
+</head>
+<body>
+    <h1>게시물 등록</h1>
+    <form method="post" id="boardReg" action="/boardregistration">
+        <div>
+            <label for="name">이름</label>
+            <br>
+            <input type="text" name="Name" id="Name" placeholder="이름을 입력해 주세요">
+        </div>
+        <div>
+            <label for="age">나이</label>
+            <br>
+            <input type="text" name="Age" id="Age" placeholder="나이를 입력해 주세요">
+        </div>
+        <div>
+            <label for="content">내용</label>	
+            <br>
+            <textarea rows="5" name="Content" id="Content" placeholder="내용을 입력해 주세요" ></textarea>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="reset" class="btn btn-danger">다시작성</button>
+            <button type="submit" class="btn btn-warning" id="btnReg" >등록</button>
+            <button type="button" class="btn btn-success" onclick="location.href='/boardList'">취소</button>
+          </div>
+    </form>
+</body>
+<script type="text/javascript">
+    // $(document).ready(function() {
+    //     ("#btnReg").click(function() {
+    //         if ($("#Name").val() == "") {
+	//                 alert("이름을 입력해주세요.");
+	//                 $("#name").focus();
+	//                 return false;
+	// 			}
+	// 			if ($("#Age").val() == "") {
+	//                 alert("나인를 입력해주세요.");
+	//                 $("#age").focus();
+	//                 return false;
+	// 			}
+	// 			if ($("#Content").val() == "") {
+	//                 alert("내용을 입력해주세요.");
+	//                 $("#content").focus();
+	//                 return false;
+	// 			}
+				
+	// 			if(confirm('정말 저장하시겠습니까?')) {
+    //                 $("#boardReg").attr("action", "/boardregistration"); // attribute setting
+	// 	            $("#boardReg").submit();
+	// 			} else {
+	// 				return false;
+	// 			}
+    //     });
+    // });
+</script>
+</html>

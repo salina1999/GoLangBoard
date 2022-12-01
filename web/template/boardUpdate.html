@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>수정 페이지</title>
+    </head>
+    <body>
+        <h3>수정 페이지</h3>
+        <form method="post" id="boardUp" action="/boardUpdate">
+            <input type="hidden" name="Bno" id="Bno" value="{{.Bno}}">
+            <div>
+                <label for="name">이름</label>
+                <br>
+                <input type="text" name="Name" id="Name" value="{{.Name}}" placeholder="이름">
+            </div>
+            <div>
+                <label for="age">나이</label>
+                <br>
+                <input type="text" name="Age" id="Age" value="{{.Age}}" placeholder="나이">
+            </div>
+            <div>
+                <label for="content">내용</label>	
+                <br>
+                <textarea rows="5" name="Content" id="Content" value="{{.Content}}" placeholder="내용" ></textarea>
+            </div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="reset" class="btn btn-danger">다시작성</button>
+                <button type="submit" class="btn btn-warning" id="btnReg" >수정</button>
+                <button type="button" class="btn btn-success" onclick="location.href='/boardList'">취소</button>
+              </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>상세 페이지</title>
+    </head>
+    <body>
+        <p><h1>상세페이지</h1></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                    <th>내용</th>
+                    <th>작성일</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>{{.Bno}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Age}}</td>
+                    <td>{{.Content}}</td>
+                    <td>{{.Regdate}}</td>
+                    <td>
+                        <form method ="post" action="/boardDetail">
+                            <input type="hidden" id="Bno" name="Bno" value="{{.Bno}}">
+                            <button type="submit">삭제</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="location.href='/boardList'">게시글 목록</button>
+        <button type="button" onclick="location.href='/boardUpdate?Bno={{.Bno}}'">게시글 수정</button>
+    </body>
+</html>

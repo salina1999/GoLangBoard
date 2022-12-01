@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>게시판목록</title>
+</head>
+<body>
+	<p><h1>게시판 목록</h1></p>
+	<table>
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>나이</th>
+				<th>내용</th>
+				<th>작성일</th>
+			</tr>
+		</thead>
+		<tbody> 
+			{{range .PostData}}
+				<tr onclick="location.href='/boardDetail?Bno={{.Bno}}'">
+					<td>{{.Bno}}</td>
+					<td>{{.Name}}</td>
+					<td>{{.Age}}</td>
+					<td>{{.Content}}</td>
+					<td>{{.Regdate}}</td>
+				</tr>
+			{{end}}
+		</tbody>
+	</table>
+	<button type="button" onclick="location.href='/boardregistration'">게시글 등록</button>
+</body>
+
+</html>
